@@ -1,9 +1,10 @@
-﻿#include<windows.h>
-#include<string>
 #include <iostream>
+#include <string>
+﻿#include <windows.h>
+
 using namespace std;
 
-int main() 
+int main()
 {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
@@ -19,33 +20,20 @@ int main()
         cout << "Введите 2 стороны прямоугольника:\n";
         cin >> a;
         cin >> b;
-        if (a == b) {
-            cout << "Это квадрат\n";
-        }
-        else {
-            cout << "Это прямоугольник\n";
-        }
+        cout << (a == b) << "Это квадрат\n";
+        cout << (a != b) << "Это прямоугольник\n";
     }
-    else
-        if (f == 2) {
-            cout << "Введите 3 стороны треугольника:\n";
-            cin >> x;
-            cin >> y;
-            cin >> z;
-            if (x == y == z) {
-                cout << "Это равносторонний треугольник\n";
-            }
-            else
-                if (x == y or y == z or x == z) {
-                    cout << "Это равнобедренный треугольник\n";
-                }
-            else {
-                cout << "Это разносторонний треугольник\n";
-            }
+    else (f == 2)
+    {
+        cout << "Введите 3 стороны треугольника:\n";
+        cin >> x;
+        cin >> y;
+        cin >> z;
+        cout << (x == y == z) << "Это равносторонний треугольник\n";
+        cout << (x == y or y == z or x == z) << "Это равнобедренный треугольник\n";
+        cout << (x != y and y != z and x != z) << "Это разносторонний треугольник\n";
     }
-
-        else {
-            cout << "Ошибка!\n";
-        }
-    return 0;
+    else {
+        cout << "Ошибка!\n";
+    }
 }
